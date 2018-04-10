@@ -1,0 +1,19 @@
+
+div {
+    background-color: greenyellow;
+    border: solid 1px white;
+}
+
+#logo {
+
+}
+
+#logo-container {
+    background-image: url("../img/logo.png");
+    background-size: cover;
+}
+
+.col {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
