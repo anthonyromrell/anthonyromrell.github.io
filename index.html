@@ -7,16 +7,30 @@
     <title>Artisandream</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>
+        function MyFunc(){
+            var myName = document.getElementsByName("myName");
+            TweenLite.to(myName, 1, {opacity:0});
+        }
+        window.onload = function Trans(params) {
+            var fade = document.getElementsByClassName("fade");
+            TweenMax.to(fade, 1, {opacity:1, onComplete:someFunction});
+        }
+        function someFunction() {
+            alert("animation complete");
+        }
+    </script>
 </head>
 
 <body style="background-color: #0f2b5b;">
     <div class="container text-dark" style="background-color: rgba(15,43,91,0);">
         <section class="text-secondary flex-fill" style="background-color: #ce1126;">
             <div class="row text-success flex-row flex-grow-1 flex-fill">
-                <div class="col-sm-12 col-md-3 offset-1 offset-sm-0 offset-md-0 text-dark d-flex d-md-flex flex-column align-items-sm-end justify-content-md-center align-items-md-end">
+                <div onclick="MyFunc()" class="fade col-sm-12 col-md-3 offset-1 offset-sm-0 offset-md-0 text-dark d-flex d-md-flex flex-column align-items-sm-end justify-content-md-center align-items-md-end">
                     <h2 class="text-white d-flex justify-content-md-start align-items-md-start" data-bs-hover-animate="bounce" style="font-size: 40;">Anthony</h2>
                 </div>
-                <div class="col"><img class="img-fluid d-inline-flex" src="assets/img/Venom_.png" data-bs-hover-animate="pulse"></div>
+                <div class="col"><img class="fade img-fluid d-inline-flex" src="assets/img/Venom_.png" ></div>
             </div>
         </section>
         <nav class="navbar navbar-dark navbar-expand-md bg-dark">
