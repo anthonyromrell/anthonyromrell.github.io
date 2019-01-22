@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,34 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script>
-        window.onload = 
-        function f1(params) {
-            TweenMax.to('.f1', 1, {opacity: 1, onComplete:f2});
-        }
-        function f2(params) {
-            TweenMax.to('.f2', 1, {opacity: 1, onComplete:f3});
-        }
-        function f3(params) {
-            TweenMax.to('.f3', 1, {opacity: 1, onComplete:f4});
-        }
-        function f4(params) {
-            TweenMax.to('.f4', 1, {opacity: 1, onComplete:f5});
-        }
-        function f5(params) {
-            TweenMax.to('.f5', 1, {opacity: 1, onComplete:f6});
-        }
-        function f6(params) {
-            TweenMax.to('.f6', 1, {opacity: 1, onComplete:f7});
-        }
-        function f7(params) {
-            TweenMax.to('.f7', 1, {opacity: 1, onComplete:f8});
-        }
-        
-    
+        window.onload =
+            (function myLoop(i) {
+                setTimeout(function () {
+                    var el = document.querySelector('.f'+i);
+                    el.className += ' on';
+                    TweenLite.to('.f'+i, 3, {opacity: 1});          
+                    if (--i) myLoop(i);     
+                }, 1500)
+            })(6);
     </script>
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -47,7 +35,7 @@
             <div class="col-xs-12 col-sm-6 col-lg-4 fade f3">
                 <img class="img-fluid" src="img/BelleFinal.png" alt="BelleFinal">
             </div>
-    
+
             <div class="col-xs-12 col-sm-6 col-lg-4 fade f4">
                 <img class="img-fluid" src="img/BobaFettColor.png" alt="BobaFettColor">
             </div>
@@ -59,11 +47,12 @@
             </div>
         </div>
 
-            
+
 
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.min.js"></script>
 </body>
+
 </html>

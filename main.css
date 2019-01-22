@@ -1,1 +1,7 @@
-.fade {opacity: 0;}
+.fade {
+    opacity: 0;
+    display: none;
+}
+.on {
+    display: block;
+}
