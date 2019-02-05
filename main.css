@@ -5,3 +5,7 @@
 .Spacer {
     height: 20px;
 }
+
+.max {
+    max-width: 400px;
+}
