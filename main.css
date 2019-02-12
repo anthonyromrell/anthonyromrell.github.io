@@ -9,3 +9,12 @@
 .max {
     max-width: 400px;
 }
+
+.bg {
+    background-image: url('img/Angg.png');
+    background-repeat: no-repeat;
+}
+
+.fill {
+    height: 1000px;
+}
