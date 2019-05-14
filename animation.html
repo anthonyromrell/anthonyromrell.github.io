@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="redBox" id="item" onclick="next()">
+
+    </div>
+
+
+    <script>
+        
+        let key = "start"
+        
+        window.onload = change()
+
+        function change(params) {
+            var elem = document.getElementById("item")
+            TweenMax.to(elem, 1, {opacity:1})
+        }
+
+        function moveStart(params) {
+            key = "middle"
+            var elem = document.getElementById("item")
+            TweenMax.to(elem, 1, {x:400, rotation:90, y:400})
+        }
+
+
+        function moveMiddle(params) {
+            key = "end"
+            var elem = document.getElementById("item")
+            TweenMax.to(elem, 1, {x:100, y:300, rotation:45})
+        }
+
+
+        function moveEnd(params) {
+            key = "start"
+            var elem = document.getElementById("item")
+            TweenMax.to(elem, 1, {x:0, y:0})
+        }
+
+        function next(params) {
+           
+            switch (key) {
+                case "start":
+                    moveStart()
+                    break;
+
+                case "middle":
+                    moveMiddle()
+                    break;
+
+                
+                case "end":
+                    moveEnd()
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+        
+
+       
+
+    </script>
+
+
+</body>
+</html>

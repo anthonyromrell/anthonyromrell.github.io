@@ -1,0 +1,38 @@
+li {
+    border: 1px solid black
+}
+
+.menuFont {
+    font-size: .8em;
+}
+
+.listingFont {
+    font-size: .7em;
+}
+
+.person {
+    height:40px;
+    width: 40px;
+    border: 1px solid red;
+    background-color: bisque
+}
+.story {
+    height:90px;
+    width: 160px;
+    border: 1px solid red;
+    background-color: bisque
+}
+
+.storyContainer {
+    border: 1px solid blue;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.icon {
+    fill: white;
+    width: 30px;
+    height: 30px;
+}

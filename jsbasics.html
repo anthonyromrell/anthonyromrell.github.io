@@ -1,23 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script>
-        function move(params) {
-            TweenLite.to(elem, 1, {vars});
-        }
-    
-    </script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="animals.css">
+    <title>JavaScript Basics</title>
+    <script src="basics.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 </head>
 <body>
-    <div class="anim" onload="move">
-        move
-    </div>
+    <button onclick="Repeat(document.getElementsByClassName('indexed'), 'Cat')">
+        Show Cats
+    </button>
+    <button onclick="Repeat(document.getElementsByClassName('indexed'), 'Dog')">
+            Show Dogs
+        </button>
+    
+        <button onclick="Repeat(document.getElementsByClassName('indexed'), 'Bird')">
+                Show Birds
+            </button>
+
+            <button onclick="ShowAll(document.getElementsByClassName('indexed'))">
+                    Show All
+                </button>
+
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Dog" class="indexed"></div>
+    <div id="Bird" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Dog" class="indexed"></div>
+    <div id="Bird" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Dog" class="indexed"></div>
+    <div id="Bird" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Dog" class="indexed"></div>
+    <div id="Bird" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Dog" class="indexed"></div>
+    <div id="Bird" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Dog" class="indexed"></div>
+    <div id="Bird" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Dog" class="indexed"></div>
+    <div id="Bird" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Dog" class="indexed"></div>
+    <div id="Bird" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Dog" class="indexed"></div>
+    <div id="Bird" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Dog" class="indexed"></div>
+    <div id="Bird" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+    <div id="Dog" class="indexed"></div>
+    <div id="Bird" class="indexed"></div>
+    <div id="Cat" class="indexed"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </body>
 </html>

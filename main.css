@@ -1,20 +1,24 @@
-.fade {
-    opacity: 0;
+
+
+.sideMenu {
+    background-color: red;
+    width: 100px;
 }
 
-.Spacer {
-    height: 20px;
+.menu {
+    height: 200px;
 }
 
-.max {
-    max-width: 400px;
+.spacer {
+    height: 60px;
 }
 
-.bg {
-    background-image: url('img/Angg.png');
-    background-repeat: no-repeat;
+.footer {
+    bottom: 0;
 }
 
-.fill {
-    height: 1000px;
+.redBox {
+    background-color: red;
+    height: 200px;
+    width: 200px;
 }

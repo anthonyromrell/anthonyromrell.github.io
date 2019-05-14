@@ -1,0 +1,17 @@
+div {
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+}
+
+#Cat {
+    background-color: black;
+}
+
+#Dog {
+    background-color: brown;
+}
+
+#Bird {
+    background-color: yellow;
+}

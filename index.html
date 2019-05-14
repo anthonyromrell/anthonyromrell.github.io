@@ -1,54 +1,66 @@
-<!DOCTYPE html>
-<html style="background-color: #0f2b5b;">
-
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Artisandream</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script>
-        function MyFunc(){
-            var myName = document.getElementsByName("myName");
-            TweenLite.to(myName, 1, {opacity:0});
-        }
-        window.onload = function Trans(params) {
-            var fade = document.getElementsByClassName("fade");
-            TweenMax.to(fade, 1, {opacity:1, onComplete:someFunction});
-        }
-        function someFunction() {
-            alert("animation complete");
-        }
-    </script>
-</head>
-
-<body style="background-color: #0f2b5b;">
-    <div class="container text-dark" style="background-color: rgba(15,43,91,0);">
-        <section class="text-secondary flex-fill" style="background-color: #ce1126;">
-            <div class="row text-success flex-row flex-grow-1 flex-fill">
-                <div onclick="MyFunc()" class="fade col-sm-12 col-md-3 offset-1 offset-sm-0 offset-md-0 text-dark d-flex d-md-flex flex-column align-items-sm-end justify-content-md-center align-items-md-end">
-                    <h2 class="text-white d-flex justify-content-md-start align-items-md-start" data-bs-hover-animate="bounce" style="font-size: 40;">Anthony</h2>
-                </div>
-                <div class="col"><img class="fade img-fluid d-inline-flex" src="assets/img/Venom_.png" ></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      
+      <div class="sticky-top bg-dark">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="navId">
+          <li class="nav-item">
+            <a href="#tab1Id" class="nav-link active">Active</a>
+          </li>
+          <li class="nav-item dropdown bg-myGreen">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#tab2Id">Action</a>
+              <a class="dropdown-item" href="#tab3Id">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#tab4Id">Action</a>
             </div>
-        </section>
-        <nav class="navbar navbar-dark navbar-expand-md bg-dark">
-            <div class="container-fluid"><a class="navbar-brand" href="#">Brand</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse"
-                    id="navcol-1">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Portfolio</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">About</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Art</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+          </li>
+          <li class="nav-item">
+            <a href="#tab5Id" class="nav-link">Another link</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
+          <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+          <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+          <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+          <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+        </div>
+        
+        <script>
+          $('#navId a').click(e => {
+            e.preventDefault();
+            $(this).tab('show');
+          });
+        </script>
+      </div>
+      
+      <div class="row w-100 tall"></div>
+      <div class="row w-100 tall"></div>
+      <div class="row w-100 tall"></div>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
-</body>
-
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
